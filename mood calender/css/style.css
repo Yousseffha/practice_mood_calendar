@@ -1,0 +1,182 @@
+/* start global rules */
+:root {
+    --mainTransition: 0.3s;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* small */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* end global rules */
+
+/*start calendar header*/
+
+.header {
+    text-align: center;
+}
+
+.header .mood button {
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    transition: var(--mainTransition);
+    background-color: transparent;
+    border-radius: 50%;
+    height: 54px;
+    width: 54px;
+
+}
+
+.header .mood .happy {
+    color: green;
+}
+
+.header .mood .angry {
+    color: red;
+}
+
+/*end calendar header*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(50px, 1fr);
+}
+
+.month {
+    text-align: center;
+}
+
+.month h3 {
+    text-transform: capitalize;
+}
+
+.month ul:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+}
+
+.month ul:first-of-type li {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+}
+
+.month ul:last-child {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+}
+
+.month ul:last-child li {
+    background-color: #888888;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--mainTransition);
+    color: white;
+}
+
+.month ul:last-child li:hover {
+    transform: scale(1.2);
+}
+
+/*January*/
+
+.january ul:last-child li:first-child {
+    grid-column: 3;
+}
+
+/*February*/
+
+.february ul:last-child li:first-child {
+    grid-column: 6;
+}
+
+/*March*/
+
+.march ul:last-child li:first-child {
+    grid-column: 6;
+}
+
+/*April*/
+
+.april ul:last-child li:first-child {
+    grid-column: 2;
+}
+
+/* May */
+
+.may ul:last-child li:first-child {
+    grid-column: 4;
+}
+
+/*June*/
+
+.june ul:last-child li:first-child {
+    grid-column: 7;
+}
+
+/*July*/
+
+.july ul:last-child li:first-child {
+    grid-column: 2;
+}
+
+/*August*/
+
+.august ul:last-child li:first-child {
+    grid-column: 5;
+}
+
+/*Octomber*/
+
+.octomber ul:last-child li:first-child {
+    grid-column: 3;
+}
+
+/*November*/
+
+.november ul:last-child li:first-child {
+    grid-column: 6;
+}
